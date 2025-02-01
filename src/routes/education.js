@@ -25,7 +25,7 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/Education'
  */
-router.get("/education/", listByLanguage);
+router.get("/education", listByLanguage);
 
 /**
  * @swagger

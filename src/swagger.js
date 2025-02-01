@@ -11,6 +11,54 @@ const options = {
     },
     components: {
       schemas: {
+        Project: {
+          type: "object",
+          required: [
+            "title",
+            "subtitulo",
+            "description",
+            "tecnologic",
+            "imagen",
+          ],
+          properties: {
+            title: {
+              type: "string",
+              description: "Título del proyecto",
+            },
+            title_en: {
+              type: "string",
+              description: "Título del proyecto en inglés",
+            },
+            subtitulo: {
+              type: "string",
+              description: "Subtítulo del proyecto",
+            },
+            subtitulo_en: {
+              type: "string",
+              description: "Subtítulo del proyecto en inglés",
+            },
+            description: {
+              type: "string",
+              description: "Descripción del proyecto",
+            },
+            description_en: {
+              type: "string",
+              description: "Descripción del proyecto en inglés",
+            },
+            tecnologic: {
+              type: "string",
+              description: "Tecnologías utilizadas en el proyecto",
+            },
+            imagen: {
+              type: "string",
+              description: "URL de la imagen del proyecto",
+            },
+            url: {
+              type: "string",
+              description: "URL del proyecto",
+            },
+          },
+        },
         Education: {
           type: "object",
           required: ["title", "subtitulo", "description", "fecha"],

@@ -1,4 +1,4 @@
-const routes = ["education"];
+const routes = ["education", "projects"];
 
 module.exports = (app) => {
   routes.forEach((route) => {

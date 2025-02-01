@@ -29,6 +29,15 @@ const educationController = () => ({
       res.json({ message: "Education deleted" });
     }
   }),
+  listByLanguage: asyncHandler(async (req, res) => {
+    const english = req.query.english === "true";
+    const education = await Education.getEducationsByLanguage({ english });
+    if (!education) {
+      res.status(404).json({ message: "Education not found" });
+    } else {
+      res.json(education);
+    }
+  }),
 });
 
 module.exports = educationController;

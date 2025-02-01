@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const {
+  listByLanguage,
   list,
   create,
   update,
@@ -12,11 +13,11 @@ const router = Router();
  * @swagger
  * /education:
  *   get:
- *     summary: Obtiene todo el historial academico
+ *     summary: Obtiene todo el historial academico por idioma
  *     tags: [Education]
  *     responses:
  *       200:
- *         description: Lista de todas las educaciones
+ *         description: Lista de la formación por idiomas
  *         content:
  *           application/json:
  *             schema:
@@ -24,13 +25,31 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/Education'
  */
-router.get("/education", list);
+router.get("/education/", listByLanguage);
+
+/**
+ * @swagger
+ * /education/all:
+ *   get:
+ *     summary: Obtiene todo el historial academico
+ *     tags: [Education]
+ *     responses:
+ *       200:
+ *         description: Lista de la formación
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Education'
+ */
+router.get("/education/all", list);
 
 /**
  * @swagger
  * /education:
  *   post:
- *     summary: Agruega formacion
+ *     summary: Agrega formación
  *     tags: [Education]
  *     requestBody:
  *       required: true

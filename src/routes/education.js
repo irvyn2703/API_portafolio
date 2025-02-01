@@ -1,12 +1,12 @@
-const { Router } = require('express')
+const { Router } = require("express");
 const {
   list,
   create,
   update,
   delete: deleteEducation,
-} = require('../controllers/educationController')()
+} = require("../controllers/educationController")();
 
-const router = Router()
+const router = Router();
 
 /**
  * @swagger
@@ -24,7 +24,7 @@ const router = Router()
  *               items:
  *                 $ref: '#/components/schemas/Education'
  */
-router.get('/education', list)
+router.get("/education", list);
 
 /**
  * @swagger
@@ -46,7 +46,7 @@ router.get('/education', list)
  *             schema:
  *               $ref: '#/components/schemas/Education'
  */
-router.post('/education', create)
+router.post("/education", create);
 
 /**
  * @swagger
@@ -77,7 +77,7 @@ router.post('/education', create)
  *       404:
  *         description: Educación no encontrada
  */
-router.put('/education/:id', update)
+router.put("/education/:id", update);
 
 /**
  * @swagger
@@ -98,6 +98,6 @@ router.put('/education/:id', update)
  *       404:
  *         description: Educación no encontrada
  */
-router.delete('/education/:id', deleteEducation)
+router.delete("/education/:id", deleteEducation);
 
-module.exports = router
+module.exports = router;

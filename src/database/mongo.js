@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-require('dotenv').config()
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 module.exports = () => {
   mongoose
@@ -8,9 +8,9 @@ module.exports = () => {
       useUnifiedTopology: true,
     })
     .then(() => {
-      console.log('Connected to MongoDB')
+      console.log("Connected to MongoDB");
     })
     .catch((err) => {
-      console.error('Error connecting to MongoDB', err)
-    })
-}
+      console.error("Error connecting to MongoDB", err);
+    });
+};

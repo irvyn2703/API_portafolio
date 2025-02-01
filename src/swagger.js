@@ -19,7 +19,15 @@ const options = {
               type: "string",
               description: "Título de la formació",
             },
+            title_en: {
+              type: "string",
+              description: "Título de la formació",
+            },
             subtitulo: {
+              type: "string",
+              description: "Subtítulo de la formación",
+            },
+            subtitulo_en: {
               type: "string",
               description: "Subtítulo de la formación",
             },
@@ -27,7 +35,15 @@ const options = {
               type: "string",
               description: "Descripción",
             },
+            description_en: {
+              type: "string",
+              description: "Descripción",
+            },
             fecha: {
+              type: "string",
+              description: "Fecha de la formación",
+            },
+            fecha_en: {
               type: "string",
               description: "Fecha de la formación",
             },
